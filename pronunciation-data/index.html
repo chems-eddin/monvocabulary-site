@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MonVocabulary — Données de prononciation</title>
+  <meta name="description" content="Fichiers de prononciation (alphabet phonétique international) utilisés par l'application MonVocabulary, avec leurs sources et leurs licences.">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #ffffff;
+      --fg: #1c1c1e;
+      --muted: #6e6e73;
+      --accent: #2f6fed;
+      --rule: #e5e5ea;
+      --card: #f5f5f7;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #000000;
+        --fg: #f5f5f7;
+        --muted: #98989d;
+        --accent: #6ea0ff;
+        --rule: #2c2c2e;
+        --card: #1c1c1e;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font: 17px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    main { max-width: 42rem; margin: 0 auto; padding: 3rem 1rem 4rem; }
+    h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 .25rem; letter-spacing: -.01em; }
+    h2 { font-size: 1.25rem; margin: 2.25rem 0 .5rem; }
+    p, li { margin: .5rem 0; }
+    ul { padding-left: 1.25rem; }
+    a { color: var(--accent); }
+    .meta { color: var(--muted); font-size: .95rem; margin-bottom: 2rem; }
+    .lang { display: flex; gap: .5rem; margin: 0 0 2rem; padding: 0; list-style: none; }
+    .lang a { padding: .35rem .8rem; border: 1px solid var(--rule); border-radius: 999px; text-decoration: none; font-size: .95rem; }
+    .summary { background: var(--card); border-radius: 12px; padding: 1rem 1.25rem; margin: 1.5rem 0; }
+    .summary p { margin: 0; }
+    .source { border-top: 1px solid var(--rule); padding: .75rem 0; }
+    .source h3 { font-size: 1.05rem; margin: 0 0 .25rem; }
+    .source p { margin: .25rem 0; color: var(--muted); font-size: .95rem; }
+    .files { display: flex; flex-wrap: wrap; gap: .25rem 1rem; margin-top: .35rem; font-size: .95rem; }
+    section + section { border-top: 1px solid var(--rule); margin-top: 3rem; padding-top: 1rem; }
+    footer { color: var(--muted); font-size: .9rem; margin-top: 3rem; }
+  </style>
+</head>
+<body>
+<main>
+  <ul class="lang" aria-label="Langue">
+    <li><a href="#fr">Français</a></li>
+    <li><a href="#en">English</a></li>
+  </ul>
+
+  <section id="fr" lang="fr">
+    <h1>Données de prononciation</h1>
+    <p class="meta">MonVocabulary pour iPhone et iPad · Dernière mise à jour : 31 octobre 2026</p>
+
+    <div class="summary">
+      <p>MonVocabulary affiche la prononciation des mots en alphabet phonétique international (API). Elle vient de dictionnaires libres, adaptés pour l'application et embarqués sur l'appareil. Les fichiers ci-dessous sont exactement ceux de l'application, publiés sous la licence de leur source.</p>
+    </div>
+
+    <p>Chaque dossier contient un fichier <code>.tsv</code> (colonnes <code>form</code>, <code>ipa</code>, <code>pos</code>, <code>note</code>) et un <code>README.md</code> qui précise la source, ses auteurs, la licence et toutes les modifications apportées. L'espagnol n'a pas de fichier : sa prononciation est calculée par des règles écrites pour l'application.</p>
+
+    <h2>Fichiers par langue</h2>
+    <div class="source">
+      <h3>Anglais (américain)</h3>
+      <p>The CMU Pronouncing Dictionary, Carnegie Mellon University · licence BSD à 2 clauses</p>
+      <div class="files"><a href="en/en.tsv">en.tsv</a><a href="en/README.md">README.md</a></div>
+    </div>
+    <div class="source">
+      <h3>Français</h3>
+      <p>Lexique 3.83, Boris New et Christophe Pallier, avec Ronald Peereman, Sophie Dufour, Christian Lachaud et d'autres ; noms de lieux : contributeurs du Wiktionnaire français · CC BY-SA 4.0</p>
+      <div class="files"><a href="fr/fr.tsv">fr.tsv</a><a href="fr/README.md">README.md</a></div>
+    </div>
+    <div class="source">
+      <h3>Allemand</h3>
+      <p>Wiktionary en allemand, contributeurs du Wiktionary (extraction german-ipa-dict) · CC BY-SA 4.0</p>
+      <div class="files"><a href="de/de.tsv">de.tsv</a><a href="de/README.md">README.md</a></div>
+    </div>
+    <div class="source">
+      <h3>Italien</h3>
+      <p>Wiktionary en anglais, contributeurs du Wiktionary (extraction kaikki.org) · CC BY-SA 4.0</p>
+      <div class="files"><a href="it/it.tsv">it.tsv</a><a href="it/README.md">README.md</a></div>
+    </div>
+    <div class="source">
+      <h3>Arabe</h3>
+      <p>Wiktionary en anglais, contributeurs du Wiktionary (extraction kaikki.org) · CC BY-SA 4.0 · formes vocalisées, l'API est calculée par l'application</p>
+      <div class="files"><a href="ar/ar.tsv">ar.tsv</a><a href="ar/README.md">README.md</a></div>
+    </div>
+    <div class="source">
+      <h3>Norvégien (bokmål, Est)</h3>
+      <p>NB Uttale, Språkbanken, Bibliothèque nationale de Norvège · CC0 1.0</p>
+      <div class="files"><a href="nb/nb.tsv">nb.tsv</a><a href="nb/README.md">README.md</a></div>
+    </div>
+
+    <h2>Licences</h2>
+    <p>Les fichiers dérivés de sources sous <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr">CC BY-SA 4.0</a> (français, allemand, italien, arabe) sont distribués sous la même licence. Le fichier anglais reste sous la licence BSD de CMUdict, reproduite dans son README. Le fichier norvégien est, comme sa source, dans le domaine public (CC0 1.0). Ces fichiers sont fournis tels quels, sans garantie.</p>
+
+    <h2>Contact</h2>
+    <p>Une erreur de prononciation ? Écrivez à <a href="mailto:contact@monvocabulary.com">contact@monvocabulary.com</a></p>
+  </section>
+
+  <section id="en" lang="en">
+    <h1>Pronunciation data</h1>
+    <p class="meta">MonVocabulary for iPhone and iPad · Last updated: October 31, 2026</p>
+
+    <div class="summary">
+      <p>MonVocabulary shows how words are pronounced in the International Phonetic Alphabet (IPA). The pronunciations come from open dictionaries, adapted for the app and stored on the device. The files below are exactly the ones shipped in the app, published under the license of their source.</p>
+    </div>
+
+    <p>Each folder holds a <code>.tsv</code> file (columns <code>form</code>, <code>ipa</code>, <code>pos</code>, <code>note</code>) and a <code>README.md</code> giving the source, its authors, the license and every change we made. Spanish has no file: its pronunciation is computed by rules written for the app.</p>
+
+    <h2>Files by language</h2>
+    <div class="source">
+      <h3>English (American)</h3>
+      <p>The CMU Pronouncing Dictionary, Carnegie Mellon University · BSD 2-Clause License</p>
+      <div class="files"><a href="en/en.tsv">en.tsv</a><a href="en/README.md">README.md</a></div>
+    </div>
+    <div class="source">
+      <h3>French</h3>
+      <p>Lexique 3.83, Boris New &amp; Christophe Pallier, with Ronald Peereman, Sophie Dufour, Christian Lachaud and others; place names: French Wiktionary contributors · CC BY-SA 4.0</p>
+      <div class="files"><a href="fr/fr.tsv">fr.tsv</a><a href="fr/README.md">README.md</a></div>
+    </div>
+    <div class="source">
+      <h3>German</h3>
+      <p>German Wiktionary, Wiktionary contributors (extracted by german-ipa-dict) · CC BY-SA 4.0</p>
+      <div class="files"><a href="de/de.tsv">de.tsv</a><a href="de/README.md">README.md</a></div>
+    </div>
+    <div class="source">
+      <h3>Italian</h3>
+      <p>English Wiktionary, Wiktionary contributors (extracted by kaikki.org) · CC BY-SA 4.0</p>
+      <div class="files"><a href="it/it.tsv">it.tsv</a><a href="it/README.md">README.md</a></div>
+    </div>
+    <div class="source">
+      <h3>Arabic</h3>
+      <p>English Wiktionary, Wiktionary contributors (extracted by kaikki.org) · CC BY-SA 4.0 · vocalized forms, the IPA is computed by the app</p>
+      <div class="files"><a href="ar/ar.tsv">ar.tsv</a><a href="ar/README.md">README.md</a></div>
+    </div>
+    <div class="source">
+      <h3>Norwegian (Bokmål, Eastern)</h3>
+      <p>NB Uttale, Språkbanken, National Library of Norway · CC0 1.0</p>
+      <div class="files"><a href="nb/nb.tsv">nb.tsv</a><a href="nb/README.md">README.md</a></div>
+    </div>
+
+    <h2>Licenses</h2>
+    <p>Files derived from sources under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> (French, German, Italian, Arabic) are distributed under the same license. The English file remains under the CMUdict BSD license, reproduced in its README. The Norwegian file is, like its source, in the public domain (CC0 1.0). These files are provided as is, without warranty.</p>
+
+    <h2>Contact</h2>
+    <p>Found a wrong pronunciation? Write to <a href="mailto:contact@monvocabulary.com">contact@monvocabulary.com</a></p>
+  </section>
+
+  <footer>© 2026 MonVocabulary · <a href="../">Confidentialité / Privacy</a> · <a href="../support.html">Assistance / Support</a></footer>
+</main>
+</body>
+</html>
