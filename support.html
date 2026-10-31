@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MonVocabulary — Assistance / Support</title>
+  <meta name="description" content="Assistance de l'application iOS MonVocabulary : suggestions de traduction, langues téléchargées, révision, quiz, suppression des données et contact.">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #ffffff;
+      --fg: #1c1c1e;
+      --muted: #6e6e73;
+      --accent: #2f6fed;
+      --rule: #e5e5ea;
+      --card: #f5f5f7;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #000000;
+        --fg: #f5f5f7;
+        --muted: #98989d;
+        --accent: #6ea0ff;
+        --rule: #2c2c2e;
+        --card: #1c1c1e;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font: 17px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    main { max-width: 42rem; margin: 0 auto; padding: 3rem 1rem 4rem; }
+    h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 .25rem; letter-spacing: -.01em; }
+    h2 { font-size: 1.25rem; margin: 2.25rem 0 .5rem; }
+    p, li { margin: .5rem 0; }
+    ul { padding-left: 1.25rem; }
+    a { color: var(--accent); }
+    .meta { color: var(--muted); font-size: .95rem; margin-bottom: 2rem; }
+    .lang { display: flex; gap: .5rem; margin: 0 0 2rem; padding: 0; list-style: none; }
+    .lang a { padding: .35rem .8rem; border: 1px solid var(--rule); border-radius: 999px; text-decoration: none; font-size: .95rem; }
+    .summary { background: var(--card); border-radius: 12px; padding: 1rem 1.25rem; margin: 1.5rem 0; }
+    .summary p { margin: 0; font-weight: 600; }
+    section + section { border-top: 1px solid var(--rule); margin-top: 3rem; padding-top: 1rem; }
+    footer { color: var(--muted); font-size: .9rem; margin-top: 3rem; }
+  </style>
+</head>
+<body>
+<main>
+  <ul class="lang" aria-label="Langue">
+    <li><a href="#fr">Français</a></li>
+    <li><a href="#en">English</a></li>
+  </ul>
+
+  <section id="fr" lang="fr">
+    <h1>Assistance</h1>
+    <p class="meta">MonVocabulary pour iPhone et iPad · Dernière mise à jour : 31 octobre 2026</p>
+
+    <p>MonVocabulary vous aide à créer vos propres listes de vocabulaire — mots, expressions ou phrases entières — entre l'anglais, le français, l'espagnol, l'allemand, l'italien, l'arabe et le norvégien (bokmål), puis à les réviser avec des cartes et à vous tester avec des quiz. Pour démarrer, la liste « Expressions du quotidien » propose 50 expressions utiles, pour n'importe quelle paire de langues.</p>
+
+    <div class="summary">
+      <p>Vous trouverez ci-dessous les réponses aux questions les plus fréquentes. Une autre question ? Écrivez-nous à <a href="mailto:contact@monvocabulary.com">contact@monvocabulary.com</a>.</p>
+    </div>
+
+    <h2>Comment fonctionnent les suggestions de traduction ?</h2>
+    <p>Pendant que vous saisissez un nouveau mot, une suggestion de traduction apparaît en gris. Elle est produite directement sur votre appareil par le framework <em>Translation</em> d'Apple. Validez-la si elle vous convient, ou corrigez-la : c'est toujours vous qui décidez.</p>
+    <p>Vous pouvez aussi traduire en une seule fois toutes les entrées d'une liste qui n'ont pas encore de traduction. Ces traductions restent des suggestions, à vérifier et valider avant d'être révisées.</p>
+
+    <h2>Pourquoi iOS me demande-t-il de télécharger des langues ?</h2>
+    <p>La traduction se fait sur l'appareil, ce qui nécessite les données de chaque langue. La première fois que vous utilisez une paire de langues, iOS peut vous proposer de les télécharger. Ce téléchargement n'a lieu qu'une fois : ensuite, les suggestions fonctionnent hors ligne. Sans ces données, vous pouvez toujours saisir vos traductions vous-même.</p>
+
+    <h2>Où gérer les langues téléchargées ?</h2>
+    <p>Les langues téléchargées sont gérées par iOS, et non par MonVocabulary. Pour les consulter ou en supprimer afin de libérer de l'espace, ouvrez <strong>Réglages › Apps › Traduire</strong>. Si vous supprimez une langue utilisée par l'une de vos listes, iOS pourra vous proposer de la télécharger à nouveau.</p>
+
+    <h2>Pourquoi les suggestions en norvégien nécessitent-elles Apple Intelligence ?</h2>
+    <p>Le framework <em>Translation</em> d'iOS ne prend pas en charge le norvégien. Pour cette langue, les suggestions sont donc produites par <em>Apple Intelligence</em>, sur les appareils compatibles où elle est activée. Comme toujours, vérifiez la suggestion avant de la valider.</p>
+    <p>Sur les autres appareils, vous saisissez simplement la traduction norvégienne vous-même ; les cartes et les quiz fonctionnent de la même façon. Les listes entre l'arabe et le norvégien n'ont pas de suggestion automatique.</p>
+
+    <h2>Pourquoi n'y a-t-il pas de phrase d'exemple pour l'arabe ?</h2>
+    <p>La fonction ✨ Phrase d'exemple demande à <em>Apple Intelligence</em> d'écrire une courte phrase d'exemple accompagnée de sa traduction. Elle n'est disponible que sur les appareils compatibles, et pour les listes dont les deux langues sont prises en charge par Apple Intelligence — ce qui n'est pas le cas de l'arabe. Vos listes en arabe profitent néanmoins des suggestions de traduction, des cartes et des quiz.</p>
+
+    <h2>Comment la révision et le quiz choisissent-ils les mots ?</h2>
+    <p>Seules les entrées dont vous avez validé la traduction sont utilisées : une suggestion non validée n'entre jamais dans vos révisions ni dans vos quiz.</p>
+    <ul>
+      <li><strong>Cartes :</strong> touchez une carte pour la retourner, puis indiquez si vous connaissiez la réponse. Chaque réponse fait évoluer le niveau de maîtrise du mot. Vous pouvez inverser le sens des cartes, les mélanger ou vous concentrer sur les mots pas encore maîtrisés.</li>
+      <li><strong>Quiz :</strong> choisissez 5, 10 ou 20 questions à choix multiple, avec 4 réponses proposées. Les mauvaises réponses sont du même type que la bonne — des mots avec des mots, des phrases avec des phrases. À la fin, vous voyez votre score et la liste de vos erreurs.</li>
+    </ul>
+
+    <h2>Comment supprimer une liste ou toutes mes données ?</h2>
+    <p>Une liste se supprime depuis l'écran de vos listes, dans l'application. Ses mots et leur progression sont supprimés avec elle.</p>
+    <p>Pour tout effacer, supprimez l'application : maintenez le doigt sur son icône, touchez Supprimer l'app, puis confirmez. Toutes les données de MonVocabulary sont alors effacées de votre appareil. Comme rien n'est envoyé sur un serveur, nous n'en conservons aucune copie.</p>
+
+    <h2>L'application collecte-t-elle des données ?</h2>
+    <p>Non. MonVocabulary ne collecte aucune donnée : pas de compte, pas de serveur, pas de suivi, pas de mesure d'audience, pas de publicité. Vos listes et votre progression restent sur votre appareil. Pour le détail, consultez la <a href="index.html#fr">politique de confidentialité</a>.</p>
+
+    <h2>Contact</h2>
+    <p>Une question, un problème ou une idée d'amélioration ? Écrivez-nous à <a href="mailto:contact@monvocabulary.com">contact@monvocabulary.com</a>.</p>
+    <p>Pour nous aider à vous répondre, précisez si possible votre appareil (iPhone ou iPad), votre version d'iOS et la paire de langues concernée.</p>
+  </section>
+
+  <section id="en" lang="en">
+    <h1>Support</h1>
+    <p class="meta">MonVocabulary for iPhone and iPad · Last updated: October 31, 2026</p>
+
+    <p>MonVocabulary helps you build your own vocabulary lists — single words, short expressions or full sentences — between English, French, Spanish, German, Italian, Arabic and Norwegian (Bokmål), then review them with flashcards and test yourself with quizzes. To get started, the “Everyday expressions” list offers 50 useful expressions for any language pair.</p>
+
+    <div class="summary">
+      <p>Below are answers to the most common questions. Anything else? Write to us at <a href="mailto:contact@monvocabulary.com">contact@monvocabulary.com</a>.</p>
+    </div>
+
+    <h2>How do translation suggestions work?</h2>
+    <p>While you type a new word, a translation suggestion appears in grey. It is produced directly on your device by Apple's <em>Translation</em> framework. Accept it if it fits, or correct it: you always have the final say.</p>
+    <p>You can also use “Fill in missing” to translate every untranslated entry of a list in one go. These translations are still suggestions, to check and validate before they are reviewed.</p>
+
+    <h2>Why does iOS ask me to download languages?</h2>
+    <p>Translation happens on the device, which requires data for each language. The first time you use a language pair, iOS may offer to download it. This happens only once: after that, suggestions work offline. Without this data, you can still type your translations yourself.</p>
+
+    <h2>Where can I manage downloaded languages?</h2>
+    <p>Downloaded languages are managed by iOS, not by MonVocabulary. To view them or remove some to free up space, open <strong>Settings › Apps › Translate</strong>. If you remove a language used by one of your lists, iOS may offer to download it again.</p>
+
+    <h2>Why do Norwegian suggestions need Apple Intelligence?</h2>
+    <p>The iOS <em>Translation</em> framework does not support Norwegian. For this language, suggestions are therefore produced by <em>Apple Intelligence</em>, on compatible devices where it is turned on. As always, check the suggestion before you validate it.</p>
+    <p>On other devices, you simply type the Norwegian translation yourself; flashcards and quizzes work exactly the same. Lists between Arabic and Norwegian have no automatic suggestion.</p>
+
+    <h2>Why are there no example sentences for Arabic?</h2>
+    <p>The ✨ Example sentence feature asks <em>Apple Intelligence</em> to write a short example sentence along with its translation. It is available only on compatible devices, and for lists whose two languages Apple Intelligence supports — which is not the case for Arabic. Your Arabic lists still get translation suggestions, flashcards and quizzes.</p>
+
+    <h2>How do review and the quiz choose words?</h2>
+    <p>Only entries whose translation you have validated are used: an unvalidated suggestion never appears in your reviews or quizzes.</p>
+    <ul>
+      <li><strong>Flashcards:</strong> tap a card to flip it, then answer “I know” or “I don't know”. Each answer updates the word's mastery level. You can reverse the direction of the cards, shuffle them, or focus on the words you haven't mastered yet.</li>
+      <li><strong>Quiz:</strong> choose 5, 10 or 20 multiple-choice questions, with 4 options each. Wrong options are of the same kind as the right one — words with words, sentences with sentences. At the end, you see your score and the list of your mistakes.</li>
+    </ul>
+
+    <h2>How do I delete a list or all my data?</h2>
+    <p>You can delete a list from your lists screen in the app. Its words and their progress are deleted with it.</p>
+    <p>To erase everything, delete the app: touch and hold its icon, tap Remove App, then Delete App. All MonVocabulary data is then erased from your device. Since nothing is sent to a server, we keep no copy of it.</p>
+
+    <h2>Does the app collect any data?</h2>
+    <p>No. MonVocabulary collects no data: no account, no server, no tracking, no analytics, no advertising. Your lists and progress stay on your device. For details, see the <a href="index.html#en">privacy policy</a>.</p>
+
+    <h2>Contact</h2>
+    <p>A question, a problem or an idea for improvement? Write to us at <a href="mailto:contact@monvocabulary.com">contact@monvocabulary.com</a>.</p>
+    <p>To help us answer, please mention your device (iPhone or iPad), your iOS version and the language pair involved.</p>
+  </section>
+
+  <footer>© 2026 MonVocabulary · <a href="index.html">Politique de confidentialité / Privacy Policy</a></footer>
+</main>
+</body>
+</html>
